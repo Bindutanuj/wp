@@ -1,0 +1,37 @@
+
+<!DOCTYPE html >
+<html >
+<head>
+<title>the stacking order</title>
+<style type="text/css">
+.layer1style
+{
+border: solid thick black; padding:1em; width:300px; background-color:green; position:absolute; top:100px; left:200px; z-index:0;
+}
+.layer2style
+{
+border:solid thick red; padding:1em; width:300px; background-color:blue; position:absolute; top:120px; left:220px; z-index:0;
+}
+.layer3style
+{
+border: solid thick green; padding:1em; width:300px; background-color:purple; position:absolute; top:140px; left:240px; z-index:0;
+}
+</style>
+<script type ="text/javascript"> var toplayer = "layer3";
+function mover(totop)
+{
+var oldtop = document.getElementById(toplayer).style; 
+var newtop = document.getElementById(totop).style; oldtop.zIndex ="0";
+newtop.zIndex="10"; toplayer=document.getElementById(totop).id;
+}
+</script>
+</head>
+<body style="background-color:yellow">
+<h2 style="text-align:center;color:red">pgm includes XHTML documnt 2 show the stacking of paragraph</h2>
+<div style="z-index:10;" class="layer1style" id ="layer1" onmouseover="mover('layer1')" > MALNAD COLLEGE OF ENGINEERING  </div>
+<div style="z-index:2;" class="layer2style" id ="layer2" onmouseover="mover('layer2')" > 
+DEPT OF COMPUTER SCIENCE AND ENGINEERING </div>
+<div style="z-index:3;" class="layer3style" id ="layer3" onmouseover="mover('layer3')"> 
+WEB PROGRAMMING LAB</div>
+</body>
+</html>
