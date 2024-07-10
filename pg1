@@ -1,0 +1,77 @@
+Main.html
+<html>
+<head><title>Frames</title>
+</head>
+<frameset cols="50%,50%">
+<frame src="form.html"/>
+<frameset rows="16%,16%,16%">
+<frame src="list.html"/>
+<frame src="image.html"/>
+<frame src="name.html"/>
+</frameset>
+</frameset>
+</html>
+
+Form.html
+<html>
+<head>
+<title>Form</title>
+</head>
+<body>
+	<h1>Welcome to MCE</h1>
+	<form>
+		<p>Staff Name:<input type="text" size="30"></p>
+		<p>Staff Specialist Area:<input type="text" size="50"></p>
+		<p>Department</p>
+		<input type="radio" value="CS">CS
+		<input type="radio" value="EC">EC
+		<input type="radio" value="MECH">MECH
+		<input type="radio" value="IS">IS
+		<p>Experience</p>
+		<input type="check box" value="CS">above 10
+		<input type="check box" value="EC">>10</br>
+		<input type="reset" value="RESET">RESET
+	</form>
+</body>
+</html>
+image.html
+<html>
+<head>
+<title>img</title>
+</head>
+<body>
+<img src="Screenshot.png">
+</body>
+list.html
+<html>
+<head>
+<title>list of colleges</title>
+</head>
+<body>
+<p> <marquee> <h2>LIST OF COLLEGES IN HASSAN</h2></marquee></p>
+<ul><li>Malnad College Of Engineering</li>
+<li>Rajeev</li>
+<li>NDRK</li>
+</ul>
+<p><h2>LIST OF COLLEGES IN HASSAN</h2></p>
+<ol><li>Malnad College Of Engineering</li>
+<li>Rajeev</li>
+<li>NDRK</li>
+</ol>
+<p><h2>LIST OF COLLEGES IN HASSAN</h2></p>
+<dl><dt>MCE</dt><dd>Salagame Road</dd>
+<dt>Rajeev</dt><dd>BM Road</dd>
+<dt>NDRK</dt><dd>Ring Road</dd>
+</dl>
+</body>
+</html>
+
+name.html
+<html>
+<head>
+	<title>Fr</title>
+</head>
+<body>
+<a href="table.html">table</a>
+</body>
+</html>
