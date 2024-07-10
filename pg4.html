@@ -1,0 +1,99 @@
+<html >
+<head>
+     
+<script type="text/javascript" >
+  function validateForm()
+{
+     var x=document.forms["form1"]["firstname"];
+      if (x.value=="")
+   {
+       alert("Please enter the First name.");
+       x.focus();
+       return false;
+   }
+ else if(x.value.length>6)
+   {
+   alert("First name cannot be greater than 6 characters.");
+  x.value="";
+  x.focus();
+  return false;
+   }
+ else if ((!namepattern.test(x.value)))
+   {
+  alert("First name should contain only alphabets.");
+  x.value="";
+  x.focus();
+  return false;
+   }
+ x=document.forms["form1"]["lastname"];
+ if(x.value=="")
+   {
+  alert("Please enter the Last name.");
+  x.focus();
+  return false;
+ }
+  else if(x.value.length>20)
+   {
+  alert("Last name cannot be greater than 20 characters.");
+  x.value="";
+  x.focus();
+  return false;
+ }
+ else if (!namepattern.test(x.value))
+{
+ alert("Last name should contain only alphabets.");
+  x.value="";
+  x.focus();
+  return false;
+ }
+ x=document.form1.email;
+ if(!emailpattern.test(x.value))
+ {
+  alert("Invalid email id.");
+  x.value="";
+  x.focus();
+  return false;
+ }
+ if(confirm("Do you want to submit the form?"))
+{
+alert("Registration Form Submitted Successfully.");
+}
+else
+return false;
+}
+ function confirmreset()
+ {
+  return confirm("Do you want to reset the form?");
+ }
+</script>
+</head>
+<body>
+<center>
+<h1>Demo Registration Form</h1>
+<form>
+<table >
+ <tr>
+<td><LABEL for="firstname">First Name:<sup style="color:#F00">*</sup> </LABEL></td>
+<td><INPUT type="text" id="firstname"></td>
+</tr>
+<tr>
+<td><LABEL for="lastname">Last Name:<sup style="color:#F00">*</sup> </LABEL></td>
+<td><INPUT type="text" id="lastname"></td>
+</tr>
+<tr>
+<td><LABEL for="email">Email:<sup style="color:red;">*</sup> </LABEL></td>
+<td><INPUT type="text" id="email"></td>
+</tr>
+<tr>
+<td></td>
+<td><br/><INPUT type="submit" onClick="return validateForm()" value="Submit">
+<INPUT type="reset" onClick="return confirmreset()"></td>
+</tr>
+<tr>
+<td></td><td style="font-size:12px;text-align:right;"><br/><i style="color:red;font-size:12px;align:right;" >* - Mandatory</i></td>
+</tr>
+</table>
+</FORM></center>
+</body>
+</html>
+
